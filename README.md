@@ -13,4 +13,5 @@ Arbitrum is an L2 scaling solution for **Ethereum** developed by **Offchain Labs
 
 Arbitum website https://developer.offchainlabs.com/docs/public_testnet provides a very well documented guide on how access their public testnet. Step by step instruction can be found below:
 
-- In the Metamask browser interface, connect to the Arbitum Testnet using custom RPC network option with the following information:[embed]metamask.pdf[/embed]
+- In the Metamask browser interface, connect to the Arbitum Testnet using custom RPC network option with the following information:
+ ![enter image description here](/metamask.pdf)
