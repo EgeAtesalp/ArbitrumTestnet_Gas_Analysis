@@ -23,8 +23,12 @@ Arbitum website https://developer.offchainlabs.com/docs/public_testnet provides 
 
 Deploying a Smart Contract in the Abritrum Rinkeby Testnet is quite easy and intuitive. Since deployment requires some amount of ETH as fee, it is adviced to first have an account with some ETH in the L2 by following the steps above. For more information, check out https://developer.offchainlabs.com/docs/contract_deployment
 
+- Install all the dependencies and the Arbitrum Monorepo following the steps in the following link: https://developer.offchainlabs.com/docs/installation
+
 - Create a smart contract project that you would like to deploy to the L2. For this guide, I have chosen to deploy a very simple HelloWorld contract, using Hardhat. The contract and the config files can be found in this repository. 
+
 contracts/MyContract.sol
+
 ```
 pragma  solidity 0.8.5;
 
@@ -60,7 +64,9 @@ module.exports = {
 
 - Create a .secret file in the repository containing the secret recovery phrases (private key can also be utilized) from your Metamask account. The secret recovery phrases can be accessed from Settings/Security & Privacy tab. (For security sake, the .secret file does not exist in the public repository.)
 - Deploying also requires a specific script file. An example can be found below : 
+
 scripts/sample-script.js 
+
 ```
 const hre = require("hardhat");
 
@@ -104,5 +110,18 @@ await my_contract.hello()
 
 # Gas Analysis
 
+The graph below shows the gas costs of different transactions and activities in the Arbitrum L2 Testnet. All costs can be found and further analyzed in the following link https://rinkeby-explorer.arbitrum.io/address/0x6b9b2babDb288C5B5EE5180dA605926383C01190 .
+
+|       Activities         |Related Costs in ETH                         
+|----------------|-------------------------------
+|L1 to L2 Transfer|0.000000028910552265 ETH            
+|L2 to L2 Transfer         |0.000141664599452724 ETH            
+|Smart Contract Deployment  |0.002888984259507854 ETH|
 
 # Related Documentations
+
+This guide and the analysis was written in July 2021. The quickstart procedure, smart contract deployment and gas costs are all subject to change. Most recent information can be found in the following links:
+
+-  Official Arbitrum Developer Guide: https://developer.offchainlabs.com/docs/developer_quickstart
+- Hardhat Quickstart: https://hardhat.org/getting-started/
+- Rinkeby Testnet Explorer: https://rinkeby-explorer.arbitrum.io/
